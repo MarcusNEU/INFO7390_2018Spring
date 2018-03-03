@@ -1,0 +1,5 @@
+FROM continuumio/anaconda
+
+ADD Problem1.py/
+
+CMD["python", "./Problem1.py"]
