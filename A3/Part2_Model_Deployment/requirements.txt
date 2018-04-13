@@ -1,0 +1,5 @@
+pandas==0.22.0
+boto3==1.7.4
+dask==0.17.2
+werkzeug==0.14.1
+flask==0.12.2
