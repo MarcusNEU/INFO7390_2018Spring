@@ -3,6 +3,7 @@ import data_prediction
 from common.custom_expections import BaseError
 import logging
 import os
+from werkzeug import exceptions
 import traceback
 
 def setLogger():
@@ -36,13 +37,20 @@ def main():
     try:
         file_uploaded = request.files['upload_file']
         preview_parameter = data_prediction.data_processing(file_uploaded, UPLOAD_FOLDER)
-        output_path = data_prediction.form_download_file(OUTPUT_FOLDER, preview_parameter[0], preview_parameter[1])
-        return render_template('download.html', output_column=preview_parameter[0], output_row=preview_parameter[1],
+        metrics_parameter = data_prediction.unpickle_error_metrics()
+        output_path = data_prediction.form_download_file(OUTPUT_FOLDER, preview_parameter[0], preview_parameter[1],
+                                                         metrics_parameter[0], metrics_parameter[1])
+        return render_template('download.html', metrics_column=metrics_parameter[0], metrics_row=metrics_parameter[1],
+                               output_column=preview_parameter[0], output_row=preview_parameter[1],
                                total_rows=preview_parameter[2], output_path=output_path)
     except BaseError as e:
         print e.message
         setLogger().exception(e.message)
         raise BaseError(code=e.code, message=e.message)
+    except:
+        import traceback
+        traceback.print_exc()
+        return render_template("no_file.html")
 
 
 @app.errorhandler(500)
