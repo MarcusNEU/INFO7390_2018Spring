@@ -1,6 +1,23 @@
 from flask import Flask, request, render_template
 import data_prediction
 from common.custom_expections import BaseError
+import logging
+import os
+import traceback
+
+def setLogger():
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+
+    fh = logging.FileHandler(os.path.join(os.getcwd(), 'log.txt'))
+    fh.setLevel(logging.DEBUG)
+
+    formatter = logging.Formatter('%(asctime)s - %(module)s.%(funcName)s.%(lineno)d - %(levelname)s - %(message)s')
+    fh.setFormatter(formatter)
+
+    logger.addHandler(fh)
+
+    return logger
 
 app = Flask(__name__)
 UPLOAD_FOLDER = './upload_files'
@@ -24,6 +41,7 @@ def main():
                                total_rows=preview_parameter[2], output_path=output_path)
     except BaseError as e:
         print e.message
+        setLogger().exception(e.message)
         raise BaseError(code=e.code, message=e.message)
 
 
@@ -33,3 +51,4 @@ def internal_server_error(e):
 
 if __name__ == '__main__':
     app.run()
+

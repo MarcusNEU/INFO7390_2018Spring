@@ -1,0 +1,33 @@
+2018-04-13 18:20:36,241 - prediction_application.main.49 - ERROR - File Form Error! Only json File is Accepted!
+Traceback (most recent call last):
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/prediction_application.py", line 43, in main
+    preview_parameter = data_prediction.data_processing(file_uploaded, UPLOAD_FOLDER)
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/data_prediction.py", line 49, in data_processing
+    raise BaseError(code=500, message="File Form Error! Only json File is Accepted!")
+BaseError
+2018-04-13 18:20:36,265 - _internal._log.88 - INFO - 127.0.0.1 - - [13/Apr/2018 18:20:36] "POST / HTTP/1.1" 200 -
+2018-04-13 18:20:39,780 - _internal._log.88 - INFO - 127.0.0.1 - - [13/Apr/2018 18:20:39] "POST / HTTP/1.1" 400 -
+2018-04-13 18:22:23,900 - prediction_application.main.49 - ERROR - File Form Error! Only json File is Accepted!
+Traceback (most recent call last):
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/prediction_application.py", line 43, in main
+    preview_parameter = data_prediction.data_processing(file_uploaded, UPLOAD_FOLDER)
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/data_prediction.py", line 49, in data_processing
+    raise BaseError(code=500, message="File Form Error! Only json File is Accepted!")
+BaseError
+2018-04-13 18:22:23,919 - _internal._log.88 - INFO - 127.0.0.1 - - [13/Apr/2018 18:22:23] "POST / HTTP/1.1" 200 -
+2018-04-13 18:34:29,777 - prediction_application.main.44 - ERROR - File Form Error! Only json File is Accepted!
+Traceback (most recent call last):
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/prediction_application.py", line 38, in main
+    preview_parameter = data_prediction.data_processing(file_uploaded, UPLOAD_FOLDER)
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/data_prediction.py", line 49, in data_processing
+    raise BaseError(code=500, message="File Form Error! Only json File is Accepted!")
+BaseError
+2018-04-13 18:34:29,790 - _internal._log.88 - INFO - 127.0.0.1 - - [13/Apr/2018 18:34:29] "POST / HTTP/1.1" 200 -
+2018-04-13 19:04:41,646 - prediction_application.main.43 - ERROR - File Form Error! Only json File is Accepted!
+Traceback (most recent call last):
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/prediction_application.py", line 37, in main
+    preview_parameter = data_prediction.data_processing(file_uploaded, UPLOAD_FOLDER)
+  File "/Users/marcus/Desktop/INFO7390/A3/Part2_Model_Deployment/data_prediction.py", line 49, in data_processing
+    raise BaseError(code=500, message="File Form Error! Only json File is Accepted!")
+BaseError
+2018-04-13 19:04:41,661 - _internal._log.88 - INFO - 127.0.0.1 - - [13/Apr/2018 19:04:41] "POST / HTTP/1.1" 200 -
