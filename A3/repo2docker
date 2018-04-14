@@ -1,0 +1,8 @@
+Please type in the following command to create the jupyter notebook of all the codes in our github repository:
+
+Part1: jupyter-repo2docker https://github.com/MarcusNEU/INFO7390_A3_P1
+
+Part2: jupyter-repo2docker https://github.com/MarcusNEU/INFO7390_A3_P2
+
+notice that:jupyter-repo2docker can only be used in python3+ environment.
+For part2, since all the codes all python scripts but not jupyter notebook, you need to create a cell and simply run this line "%run prediction_application.py" to run the application.
