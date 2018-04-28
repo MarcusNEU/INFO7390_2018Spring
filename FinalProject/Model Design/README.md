@@ -1,4 +1,5 @@
 ## Background
+
 The credit card data set comes from the European credit card tansaction data during two days in September 2013. In the total number of 284,807 times of transactions, 492 cases of fraud were discovered, which means the data set is extremely unbalanced, and fraud frequency only accounts for 0.172% of the total transactions.
 <br>
 This data set has 31 columns. V1, V2,,... ,V28 are the main features which are processed by PCA because of its sensibility, 'Time' is the time in seconds between each transaction and the first transaction. 'Amount' represents the transaction amount. 'Class' represents the response variable, 1 means fraud, and 0 means normal.
@@ -164,13 +165,11 @@ Here is result of model selection:
 |      *Random Forest    |    0.86   |  0.94  | 0.90 |   0.99   |    19.69    |       -16.14      |       -1.09       |
 | Gradient Boosting Tree |    0.80   |  0.96  | 0.87 |   0.99   |    22.54    |       -59.84      |       -14.26      |
 
-* All the models have got improvements from hyperparameters' tunning especially for Logistic Regression and Gradient Boosting Tree.
+* All the models have got improvements from tuning hyperparameters especially for Logistic Regression and Gradient Boosting Tree. In conclusion, SVM and Random Forest are more sensitive to the proportion of undersampling compared to tuning hyperparameters. Logistic Regression and GBT are sensitive to both of them.
 
-* In conclusion, SVM and Random Forest are more sensitive to the proportion of undersampling compared to tunning hyperparameters. Logistic Reregssion and GBT are sensetive to both of them.
+* Random Forest is still the best among the 4 models. Actually the improvement after tuning hyperparameters is trivial for Support Vector Machine (non-linear) and Random Forest. Anyway, better than nothing. It still saves about $ 1.09 per (fraud + misclassification normal) transaction for us.
 
-* Random Forest is still the best amoung the 4 models. Actually the improvement after tunning hyperparameters is trivial for Support Vector Machine (non-linear) and Random Forest. Anyway, better than nothing. It still saves about $ 1.09 per (fraud + misclassification normal) transaction for us.
-
-* SVM has a 100% precision which means if a transaction is classified as fraud by SVM then it must be a fraud. Thus, a typical predication process would be like this: predict using SVM first, if result is fraud then classify the transaction as fraud. Otherwise, predict agian using Random Forest and return the prediction result. By doing this, we could increase the recall rate as far as possible without doing any harm to precision.
+* SVM has a 100% precision which means if a transaction is classified as fraud by SVM then it must be a fraud. Thus, a typical predication process would be like this: predict using SVM first, if result is fraud then classify the transaction as fraud. Otherwise, predict again using Random Forest and return the prediction result. By doing this, we could increase the recall rate as far as possible without doing any harm to precision.
 
 * The models we will be using in the web application are:
 	* SVC(C=1, gamma=0.1)
