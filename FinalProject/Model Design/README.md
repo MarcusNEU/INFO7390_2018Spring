@@ -169,7 +169,7 @@ Here is result of model selection:
 
 * Random Forest is still the best among the 4 models. Actually the improvement after tuning hyperparameters is trivial for Support Vector Machine (non-linear) and Random Forest. Anyway, better than nothing. It still saves about $ 1.09 per (fraud + misclassification normal) transaction for us.
 
-* SVM has a 100% precision which means if a transaction is classified as fraud by SVM then it must be a fraud. Thus, a typical predication process would be like this: predict using SVM first, if result is fraud then classify the transaction as fraud. Otherwise, predict again using Random Forest and return the classification result. By doing this, we could increase the recall rate as far as possible without doing any harm to precision.
+* SVM has a 100% precision which means if a transaction is classified as fraud by SVM then it must be a fraud. Thus, a typical classification process would be like this: classify using SVM first, if result is fraud then classify the transaction as fraud. Otherwise, classify again using Random Forest and return the classification result. By doing this, we could increase the recall rate as far as possible without doing any harm to precision.
 
 * The models we will be using in the web application are:
 	* SVC(C=1, gamma=0.1)
