@@ -21,5 +21,7 @@ The application achieves the following basic functions: user login, user identif
 * Docker
 
 Use the following cmd to run the script:
+
 docker pull xuchenlian/flask_final
+
 docker run -p 5000:5000 xuchenlian/flask_final python app.py
