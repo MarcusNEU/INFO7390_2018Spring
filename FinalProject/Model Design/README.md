@@ -197,6 +197,8 @@ We integrated the scattered jupyter notebooks as a Python class to make pipeline
 
 https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/Docker/model_design.py
 
+https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/Docker/model_design_docker.py
+
 Use the following commands to pull and run the whole program:
 Lite version with only Logistic Regression and Random Forest and less iteration:
 
