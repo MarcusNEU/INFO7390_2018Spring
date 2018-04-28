@@ -26,16 +26,17 @@ docker pull xuchenlian/flask_final
 
 docker run -p 5000:5000 xuchenlian/flask_final python app.py
 
+
 * Try out the application!
 
-Customer:
-User name: marcus
-Password: dog
-test data: https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Web%20Application/test_data_file/usercresdit.csv
+ Customer:
+ User name: marcus
+ Password: dog
+ test data: https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Web%20Application/test_data_file/usercresdit.csv
 
-Administrators:
-User name: john
-Password: cat
-test data:
-https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Web%20Application/test_data_file/classification.csv
+ Administrators:
+ User name: john
+ Password: cat
+ test data:
+ https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Web%20Application/test_data_file/classification.csv
 
