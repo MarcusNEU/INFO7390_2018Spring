@@ -183,4 +183,13 @@ SVM and Random Forest models have been pickled and uploaded to Amazon S3 for lat
 
 ![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/pickle.png)
 
+## Dockerize
 
+Use the following commands to pull and run the whole program:
+Lite version with only Logistic Regression and Random Forest and less iteration:
+docker pull qianli94neu/info7390final_lite
+docker run -it qianli94neu/info7390final_lite python /src/model_design_docker_lite.py
+
+Complete version:
+docker pull qianli94neu/info7390final_complete
+docker run -it qianli94neu/info7390final_complete python /src/model_design_docker.py
