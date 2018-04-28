@@ -197,3 +197,17 @@ Complete version:
 docker pull qianli94neu/info7390final_complete
 
 docker run -it qianli94neu/info7390final_complete python /src/model_design_docker.py
+
+## References
+
+We got inspirations on how to do feature engineering on anonymous features from:
+https://www.kaggle.com/currie32/predicting-fraud-with-tensorflow
+
+We learned about how to iterate the undersampling proportion from:
+https://www.kaggle.com/gargmanish/how-to-handle-imbalance-data-study-in-detail
+
+We gained some insights of how to do grid search and cross validation on Logisitc Regression from:
+https://www.kaggle.com/joparga3/in-depth-skewed-data-classif-93-recall-acc-now
+
+We dicided which hyperparameters to tune by the guide of:
+https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/
