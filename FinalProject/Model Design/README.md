@@ -10,7 +10,7 @@ We will be using Logistic Regression, Support Vector Machine, Random Forest and 
 
 ## Precision-Recall Trade-off
 
-To get a trade-off of precision and recall rate, we need to define a method to measure the overall performance of a model with a certain precision and recall rate. In this project, we simply use the average amount of normal and fraud transactions to represent the weights of precision and recall.
+To get a trade-off of precision and recall rate, we need to define a method to measure the overall performance of a model with a certain precision and recall rate. Instead of use the classification score in sklearn or some other packages, we need to make this have more reality meanings to customers, busniess and bank. In this project, we simply use the average amount of normal and fraud transactions to represent the weights of precision and recall.
   <pre><code>
   loss = (1 - precision) * 88.29 + (1 - recall) * 122.12
   </pre></code>
@@ -201,13 +201,17 @@ docker run -it qianli94neu/info7390final_complete python /src/model_design_docke
 ## References
 
 We got inspirations on how to do feature engineering on anonymous features from:
+
 https://www.kaggle.com/currie32/predicting-fraud-with-tensorflow
 
 We learned about how to iterate the undersampling proportion from:
+
 https://www.kaggle.com/gargmanish/how-to-handle-imbalance-data-study-in-detail
 
 We gained some insights of how to do grid search and cross validation on Logisitc Regression from:
+
 https://www.kaggle.com/joparga3/in-depth-skewed-data-classif-93-recall-acc-now
 
 We dicided which hyperparameters to tune by the guide of:
+
 https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/
