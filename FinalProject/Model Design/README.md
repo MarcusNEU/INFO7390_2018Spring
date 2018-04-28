@@ -183,6 +183,14 @@ SVM and Random Forest models have been pickled and uploaded to Amazon S3 for lat
 
 ![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/pickle.png)
 
+## Pipeline
+
+We made the pipeline using Airflow and we deployed it locally:
+
+![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/airflow-graph_view.png)
+
+![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/airflow-tree_view.png)
+
 ## Dockerize
 
 Use the following commands to pull and run the whole program:
