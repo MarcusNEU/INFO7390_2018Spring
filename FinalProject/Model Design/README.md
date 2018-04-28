@@ -16,7 +16,7 @@ To get a trade-off of precision and recall rate, we need to define a method to m
   </pre></code>
 
 
-We tried total loss of FN and FP cases like loss = FN*122.12 + FP * 88.29 or divided by (FN+FP) which equals to the average loss of misclassification cases. These two are better than the former as they have clearer definitions and mathematical meanings. Actually, the current loss function we used is an approximate for average loss of frauds and misclassification transactions. It will get an approximate optimal solve under a smaller undersampling proportion compared with the other two loss functions. Thus, the one we used is the optimal one for calculation and research in a limited time.
+We tried total loss of FN and FP cases like loss = FN*122.12 + FP * 88.29 or divided by (FN+FP) which equals to the average loss of misclassification cases. These two are better than the former as they have clearer definitions and mathematical meanings. Actually, the current loss function we used is an approximate of average cost of frauds and misclassified normal transactions. It will get an approximate optimal solve under a smaller undersampling proportion compared with the other two loss functions. Thus, the one we used is the optimal one for calculation and research in a limited time.
 
 ## Benchmark
 
