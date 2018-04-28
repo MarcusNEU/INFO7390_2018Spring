@@ -1,0 +1,8 @@
+2018-04-27 14:25:45,298 - _internal._log.88 - INFO - 127.0.0.1 - - [27/Apr/2018 14:25:45] "GET /logout HTTP/1.1" 500 -
+2018-04-27 14:25:45,330 - _internal._log.88 - INFO - 127.0.0.1 - - [27/Apr/2018 14:25:45] "GET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2018-04-27 14:25:45,332 - _internal._log.88 - INFO - 127.0.0.1 - - [27/Apr/2018 14:25:45] "GET /logout?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+2018-04-27 14:25:45,338 - _internal._log.88 - INFO - 127.0.0.1 - - [27/Apr/2018 14:25:45] "GET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2018-04-27 14:25:45,381 - _internal._log.88 - INFO - 127.0.0.1 - - [27/Apr/2018 14:25:45] "GET /logout?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2018-04-27 14:25:45,406 - _internal._log.88 - INFO - 127.0.0.1 - - [27/Apr/2018 14:25:45] "GET /logout?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2018-04-27 14:25:45,437 - _internal._log.88 - INFO - 127.0.0.1 - - [27/Apr/2018 14:25:45] "GET /logout?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2018-04-27 14:27:50,871 - _internal._log.88 - INFO -  * Detected change in '/Users/chenlianxu/Desktop/A1/firstflask/app.py', reloading

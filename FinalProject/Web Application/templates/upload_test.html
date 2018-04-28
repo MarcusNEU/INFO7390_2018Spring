@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #000000;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}.file-box{ position:relative;width:588px;}
+.txt{ height:30px; border:1px solid #cdcdcd; width:388px;}
+.btn{ background-color: #000000; border:1px solid #000000;height:30px; width:70px; font-family:helvetica}
+.file{ position:absolute; right:120px; filter:alpha(opacity:0);opacity: 0; height:30px; width:70px }
+.download_btn{ display:block; height:30px; width:140px; border:1px solid #000000; background-color: #000000; text-align:center; float:right;}
+.download_btn a { font-size: 15px; padding-top:5px; display: block; color: #ffffff;text-decoration:none; }
+.preview_table {font-family: verdana,arial,sans-serif; font-size:8px; color:#333333; border-width: 1px; border-color: #9D9D9D; border-collapse: collapse;}
+.preview_table th { border-width: 1px; padding: 4px; border-style: solid; border-color: #9D9D9D;}
+.preview_table td {border-width: 1px; padding: 4px; border-style: solid; border-color: #9D9D9D;}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="/">Credit Card Fraud Detection</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Detect Fraud</a>
+    <div class="dropdown-content">
+        {% if current_user.role_id == 1 %}
+            <a href="/choose">Upload Transaction File</a>
+            <a href="/index">Input Transaction Data</a>
+        {% else %}
+            <a href="/uploadforuser">Upload Transaction File</a>
+            <a href="/index">Input Transaction Data</a>
+        {% endif %}
+    </div>
+  </li>
+</ul>
+
+<div style="background-color:#000000;float:left;"></div>
+<div style="font-size:22px; font-family:helvetica;">Dectect Credit Card Fraud
+</div>
+<div style="font-size:28px; font-family:impact;">Data Upload Page
+</div>
+<br>
+<br>
+<div style="border:1px solid #d0d0d0;">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="file-box">
+                <input type='text' name='textfield' id='textfield' class='txt' />
+                <input type='button' class='btn' value='Browse...' style="color:white;"/>
+                <input type="file" name="upload_file" class="file" id="upload_file" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                <input type="submit" name="submit" class="btn" value="Upload" style="color:white;"/>
+            </div>
+        </form>
+</div>
+
+<br>
+
+<div style="border:1px solid #d0d0d0;" align="center">
+     <font color="BEBEBE" face="helvetica">Results of Prediction</font>
+</div>
+<br>
+<br>
+<div style="font-size:10px; font-family:helvetica;" align="right">
+    Northeastern University
+</div>
+<div style="font-size:10px; font-family:helvetica; " align="right">
+    INFO7390 Spring 2018
+</div>
+<div style="font-size:10px; font-family:helvetica;" align="right">
+    Team2: Qianli Ma & Chenlian Xu
+</div>
+</body>
+</html>
