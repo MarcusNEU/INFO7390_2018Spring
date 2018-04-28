@@ -1,5 +1,9 @@
 ## Web Application for Credit Card Frauds Detection
 
+The application has been deployed on:
+
+http://104.236.116.16:5000
+
 This is the 2nd part of the final project in which the deployment of the classification website was designed. Flask and sqlite was used to establish the application. 
 
 * ER picture for bank relationship database
