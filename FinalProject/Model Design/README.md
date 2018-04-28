@@ -61,7 +61,7 @@ We simply drop all of the features that have very similar distributions between 
  
  Then the same things as we did for benchmark: iteration for optimal undersampling proportions. Finally we get results of optimal proportion and min loss of each model.
  
- We compare the performance of benchmark and the models after feature engineering. Then we pass the better one to the next part ---- feature selection.
+ We compare the performance of benchmark and the models after feature engineering. Then we pass the better one to do feature selection.
 
 ## Feature Selection
 
@@ -69,7 +69,7 @@ https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%
 
 In this part, all the model will be trained on the corresponding optimal undersampling proportion calculated from the former parts. we simply use feature importance to rank the features and select top X features for all the models.
 
-Since non-linear SVM is a black box classifier for which we do not know the mapping function Φ explicitly. There will be not any further pre-processing on SVM. The benchmark reaches the min loss at exactlly the same proportion(=8) as the one after feature engineering. Thus, we will be using the one after feature engineering for further discussion.
+Since non-linear SVM is a black box classifier for which we do not know the mapping function Φ explicitly. There will be not any further pre-processing on SVM. The benchmark reaches the min loss at exactly the same proportion (=8) as the one after feature engineering. Thus, we will be using the one after feature engineering for further discussion.
 
 Here is the result of the whole pre-procssing part:
 
