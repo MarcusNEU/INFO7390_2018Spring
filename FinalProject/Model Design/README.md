@@ -193,6 +193,10 @@ We made the pipeline using Airflow and we deployed it locally:
 
 ## Dockerize
 
+We integrated the scattered jupyter notebooks as a Python class to make pipeline and docker iamges. The model, columns, loss value, undersampling proportion and model performances was designed as class attributes. Every step of model design would be instance method of the class. Finally, the code was becoming abstract, testable and reusable:
+
+https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/Docker/model_design.py
+
 Use the following commands to pull and run the whole program:
 Lite version with only Logistic Regression and Random Forest and less iteration:
 
