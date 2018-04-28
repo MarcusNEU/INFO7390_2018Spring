@@ -5,7 +5,7 @@ This data set has 31 columns. V1, V2,,... ,V28 are the main features which are p
 
 We will be using Logistic Regression, Support Vector Machine, Random Forest and Gradient Boosting Tree in the following steps.
 
-# TODO PIC FOR CATO DIS
+![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/class_distribution.png)
 
 ## Precision-Recall Trade-off
 
@@ -43,7 +43,7 @@ In this part, two sets of model will be trained:
 
 ## Feature Engineering
 
-# PIC FOR DIS DIS
+![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/distribution.png)
 
 By looking into the differences between normal and fraud transactions, we get some insights of how to do feature engineering on anonymous features. Since this is a classification problem, two classes of the same feature share a very similar distribution would not do much to the model learning.
 
@@ -169,7 +169,6 @@ Here is result of model selection:
 
 SVM and Random Forest models have been pickled and uploaded to Amazon S3 for later using in web application:
 
-# PIC
-
+![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/pickle.png)
 
 
