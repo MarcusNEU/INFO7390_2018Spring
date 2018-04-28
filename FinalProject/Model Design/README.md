@@ -18,6 +18,9 @@ To get a trade-off of precision and recall rate, we need to define a method to m
 We tried total loss of FN and FP cases like loss = FN*122.12 + FP * 88.29 or divided by (FN+FP) which equals to the average loss of misclassification cases. These two are better than the former as they have clearer definations and methmatical meanings. Actually, the current loss function we used is a approximate for average loss of frauds and misclassification transactions. It will get a approximate optimal solve under a smaller undersampling proportion compared with the other two loss functions. Thus, the one we used is the optimal one for calculation and research in a limited time.
 
 ## Benchmark
+
+https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/benchmark.ipynb
+
 In this part, two sets of model will be trained:
 
 * Data set without resampling: all the models will be trianed on 75% of the original data set and test on the other 25%.
@@ -43,6 +46,8 @@ In this part, two sets of model will be trained:
 
 ## Feature Engineering
 
+https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/feature_engineering%26prediction_algorithms.ipynb
+
 ![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/graphs/distribution.png)
 
 By looking into the differences between normal and fraud transactions, we get some insights of how to do feature engineering on anonymous features. Since this is a classification problem, two classes of the same feature share a very similar distribution would not do much to the model learning.
@@ -58,6 +63,9 @@ We simply drop all of the features that have very similar distributions between 
  We compare the performance of benchmark and the models after feature engineering. Then we pass the better one to the next part ---- feature selection.
 
 ## Feature Selection
+
+https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/feature_selection.ipynb
+
 In this part, all the model will be trained on the corresponding optimal undersampling proportion calculated from the former parts. we simply use feature importance to rank the features and select top X features for all the models.
 
 Since non-linear SVM is a black box classifier for which we do not know the mapping function Φ explicitly. There will be not any further pre-processing on SVM. The benchmark reaches the min loss at exactlly the same proportion(=8) as the one after feature engineering. Thus, we will be using the one after feature engineering for further discussion.
@@ -115,6 +123,9 @@ Here is the result of the whole pre-procssing part:
 
     
  ## Model Selection:
+ 
+ https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/model_selection.ipynb
+ 
  This is the final part of the actual model design process. We will be tuning hyperparameters for all the current optimal models we got from the former parts. Grid search methods are defined here to implement the tuning.
 
 Here are the optimal hyperparameters:
@@ -166,6 +177,8 @@ Here is result of model selection:
 	* RandomForestClassifier(n_estimators=200, max_features=1, max_depth=20, min_smaples_split=2, min_samples_leaf=1)
 
 ## Model & Columns Upload
+
+https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Model%20Design/pickle_models.ipynb
 
 SVM and Random Forest models have been pickled and uploaded to Amazon S3 for later using in web application:
 
