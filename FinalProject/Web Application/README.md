@@ -17,3 +17,9 @@ A relational database is used to store relationships between tables and data. Th
 The application achieves the following basic functions: user login, user identification, Input data classification, File data classification. because of the confidentiality of the algorithm used to convert columns, classification of input data need to be further improved.
 
 ![Aaron Swartz](https://github.com/MarcusNEU/INFO7390_2018Spring/blob/master/FinalProject/Web%20Application/graphs/Picture2.png)
+
+* Docker
+
+Use the following cmd to run the script:
+docker pull xuchenlian/flask_final
+docker run -p 5000:5000 xuchenlian/flask_final python app.py
